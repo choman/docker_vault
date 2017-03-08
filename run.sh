@@ -1,4 +1,5 @@
 #!/bin/bash
+
 docker run --rm --cap-add=IPC_LOCK             \
            -e VAULT_ADDR=http://127.0.0.1:8200 \
            -v $(pwd)/config:/vault/config      \
