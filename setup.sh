@@ -1,6 +1,8 @@
 #!/bin/bash
 
 VAULT_SERVER=10.0.2.4
+ADMIN_PW=abcd1234
+
 export VAULT_ADDR=http://${VAULT_SERVER}:8200
 
 vault init > /tmp/out
@@ -22,6 +24,6 @@ vault unseal ${keys[1]/Unseal Key [1-5]: /}
 vault unseal ${keys[2]/Unseal Key [1-5]: /}
 
 vault policy-write secret/* policy.hcl
-vault write secret/admin value=abcd1234
+vault write secret/admin value=$ADMIN_PW
 vault token-create -policy=secret/* | grep "token " | awk '{print $2}' > token
 
