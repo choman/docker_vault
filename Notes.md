@@ -1,5 +1,6 @@
-# Install Notes:
+# Notes:
 
+## Install
 - ./run.sh
 - edit setup.sh
 - ./setup.sh
@@ -8,9 +9,9 @@
 Need instructions
 
 ## Send/Retrieve client files
-- copy all to client - less root token
+- copy keys and token files to client
 
-Now client should be able to unseal vault using keys 
+NOTE: Now client should be able to unseal vault using keys 
 and access data using token
 
 ## Notes:
