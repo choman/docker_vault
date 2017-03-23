@@ -41,3 +41,8 @@ vault token-create -policy=secret/*
 
 Now client should be able to unseal vault using keys 
 and access data using token
+
+
+
+NOTE: docker-vault submodule does not appear to be needed
+NOTE: dockerhub vaul may be running slightly older version of vault
